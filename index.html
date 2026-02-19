@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>電卓アプリ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="display">
+        <div id="displayText">0</div>
+      </div>
+
+      <div class="buttons">
+        <button class="btn" data-action="clear">AC</button>
+        <button class="btn" data-action="back">⌫</button>
+        <button class="btn" data-operator="÷">÷</button>
+        <button class="btn" data-operator="×">×</button>
+
+        <button class="btn" data-number="7">7</button>
+        <button class="btn" data-number="8">8</button>
+        <button class="btn" data-number="9">9</button>
+        <button class="btn" data-operator="−">−</button>
+
+        <button class="btn" data-number="4">4</button>
+        <button class="btn" data-number="5">5</button>
+        <button class="btn" data-number="6">6</button>
+        <button class="btn" data-operator="+">+</button>
+
+        <button class="btn" data-number="1">1</button>
+        <button class="btn" data-number="2">2</button>
+        <button class="btn" data-number="3">3</button>
+        <button class="btn equal" data-action="equal">=</button>
+
+        <button class="btn zero" data-number="0">0</button>
+        <button class="btn" data-action="dot">.</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
