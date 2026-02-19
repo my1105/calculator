@@ -84,6 +84,11 @@ function clickDot() {
 }
 
 function calculate() {
+  const lastChar = inputText.slice(-1);
+  if (isOperator(lastChar)) {
+    inputText = inputText.slice(0, -1);
+  }
+
   const formula = inputText
     .replace(/×/g, "*")
     .replace(/÷/g, "/")
