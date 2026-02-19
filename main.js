@@ -35,10 +35,19 @@ function clickNumber(num) {
     isResult = false;
   }
 
+  const lastChar = inputText.slice(-1);
+
   if (inputText === "0") {
     inputText = num;
-  } else {
+  } else if (isOperator(lastChar)) {
     inputText = inputText + num;
+  } else {
+    const lastNumber = getLastNumber();
+    if (lastNumber === "0") {
+      inputText = inputText.slice(0, -1) + num; 
+    } else {
+      inputText = inputText + num;
+    }
   }
 
   display.textContent = inputText;
