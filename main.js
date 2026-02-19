@@ -44,7 +44,7 @@ function clickNumber(num) {
   } else {
     const lastNumber = getLastNumber();
     if (lastNumber === "0") {
-      inputText = inputText.slice(0, -1) + num; 
+      inputText = inputText.slice(0, -1) + num;
     } else {
       inputText = inputText + num;
     }
@@ -68,11 +68,16 @@ function clickOperator(op) {
 }
 
 function clickDot() {
-  const lastNumber = getLastNumber();
+  const lastChar = inputText.slice(-1);
 
-  if (lastNumber.indexOf(".") !== -1) {
+  if (isOperator(lastChar)) {
+    inputText = inputText + "0.";
+    display.textContent = inputText;
     return;
   }
+
+  const lastNumber = getLastNumber();
+  if (lastNumber.indexOf(".") !== -1) return;
 
   inputText = inputText + ".";
   display.textContent = inputText;
